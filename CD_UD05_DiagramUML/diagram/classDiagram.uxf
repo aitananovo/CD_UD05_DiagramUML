@@ -1,0 +1,81 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text>Space for diagram notesn</help_text><element><id>UMLClass</id><coordinates><x>40</x><y>175</y><w>215</w><h>145</h></coordinates><panel_attributes>Animal
+--
+- nombre: String
+- especie: String
+- raza: Stringa
+- propietario: Cliente
+- historialConultas: ArrayList&lt;Consulta&gt;
+--
++ Animal(String: nombre, String: especie, String: raza, Cliente: propietario)
++ agregarConsulta(Consulta: consulta): void
++ getNombre(): String
++ setNombre(String: nombre): void
++ getEspecie(): String
++ setEspecie(String: especie): void
++ getRaza(): String
++ setRaza(String: raza): void
++ getPropietario(): Cliente
++ setPropietario(Cliente: propietario): void
++ getHistorialconsultas(): ArrayList&lt;Consulta&gt;
++ setHistorialConsultas(ArrayList&lt;Consulta&gt;: historialConsultas): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>185</y><w>175</w><h>110</h></coordinates><panel_attributes>Cliente
+--
+- nombre: String
+- direccion: String
+- telefono: String
+- listaAnimales: ArrayList&lt;Animal&gt;
+--
++ Cliente(String: nombre, String: direccion. String: telefono)
++ getListaAnimales(): ArrayList&lt;Animal&gt;
++ setListasAnimales(ArrayList&lt;Animal&gt;: listaAnimales): void
++ getTelefono(): String
++ setTelefono(String: telefono): void
++ getDireccion(String: direccion): String
++ setDireccion(String direccion): void
++ getNombre(String: nombre): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>415</y><w>305</w><h>140</h></coordinates><panel_attributes>Consulta
+--
+- fecha: String
+- motivo: String
+- diagnostico: String
+- tratamiento: String
+- veterinario: Veterinario
+--
++ Consulta(fecha: String, motivo: String, diagnostico: String, tratamiento: String, veterinario: Veterinario)
++ getFecha(): String
++ setFecha(fecha: String): void
++ getMotivo(): String
++ setMotivo(motivo: String): void
++ getDiagnostico(): String
++ setDiagnostico(diagnostico: String): void
++ getTratamiento(): String
++ setTratamiento(tratamiento: String): void
++ getVeterinario(): Veterinario
++ setVeterinario(veterinario: Veterinario): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>445</x><y>440</y><w>105</w><h>95</h></coordinates><panel_attributes>Veterinario
+--
+- nombre: String
+- especialidad: String
+--
++ Veterinario(nombre: String, especialidad: String)
++ getNombre(): String
++ setNombre(nombre: String): void
++ getEspecialidad(): String
++ setEspecialidad(especialidad: String): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>10</y><w>105</w><h>95</h></coordinates><panel_attributes>Veterinaria
+--
+- listaAnimales: ArrayList&lt;Animal&gt;
+- listaClientes: ArrayList&lt;Cliente&gt;
+--
++ Veterinaria()
++ agregarCliente(cliente: Cliente): void
++ agregarAnimal(animal: Animal): void
++ asignarConsulta(animal: Animal, consulta: Consulta): void
++ imprimirConsultas(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>235</y><w>115</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>210;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>315</y><w>15</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>485</y><w>140</w><h>25</h></coordinates><panel_attributes>lt=-
+m1=1*
+m2=1.1
+</panel_attributes><additional_attributes>10;20;260;20</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>50</y><w>125</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=1.*
+m2=1.1
+</panel_attributes><additional_attributes>10;240;10;10;230;10</additional_attributes></element><element><id>Relation</id><coordinates><x>385</x><y>50</y><w>90</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=1.*
+m2=1.1
+</panel_attributes><additional_attributes>140;260;140;10;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>260</x><y>220</y><w>25</w><h>15</h></coordinates><panel_attributes>1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>175</x><y>395</y><w>25</w><h>15</h></coordinates><panel_attributes>1*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>170</x><y>325</y><w>25</w><h>15</h></coordinates><panel_attributes>1.1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>330</x><y>220</y><w>25</w><h>15</h></coordinates><panel_attributes>1.1</panel_attributes><additional_attributes></additional_attributes></element></diagram>
